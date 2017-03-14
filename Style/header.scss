@@ -1,0 +1,55 @@
+.header {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  display: block;
+  height: 85px;
+  padding: 0px 24px;
+  margin: 0px;
+  font-size: 16px;
+  font-family: "Open Sans";
+  font-weight: bold;
+  text-transform: uppercase; 
+  color: rgb(12, 46, 59); 
+  overflow: hidden;
+}
+.menu {
+    position: absolute;
+    display: inline-block;
+    height: 85px;
+    width: 100%;
+    margin: 0 200px;
+    overflow: hidden;
+}
+.menu-item {
+    position: relative;
+    display: inline-block;
+    transition: 0.3s;
+    margin: 30px  10px;
+    cursor: pointer;
+    &:hover {
+        color: #ffcc00; 
+    }
+}
+.logo {
+    position: relative;
+    display: inline-block;
+    padding: 14px;
+    overflow: hidden; 
+    cursor: default;
+}
+.logo-sub-text {
+    display: inline-block;
+    line-height: 1.2;
+    margin-left: -23px;  
+}
+
+@media only screen and (min-width: 1200px) {
+    .header {
+        margin: 0px auto;
+        padding: 0px;
+        width: 1200px;
+    }
+}
+
+

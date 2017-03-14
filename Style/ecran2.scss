@@ -1,0 +1,237 @@
+.ecran2 {
+    display: block;
+    min-height: 705px;
+    width: 300px;
+    margin: 0px auto;
+    margin-bottom: 80px;
+    overflow: hidden;
+    cursor: default;
+
+    
+}
+.title {
+    margin: 50px 0px;     
+    font-size: 30px;
+    font-family: "Open Sans";
+    font-style: normal;
+    color: rgb(12, 46, 59);
+    font-weight: bold;
+    text-align: center;
+    line-height: 0.8;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 140px;
+        margin : 15px auto;
+        border-bottom: 3px solid rgb(250, 192, 18);
+    }
+}
+.container {
+    display: table;
+    overflow: hidden;
+
+    
+    
+
+    .ecran2-img {
+        position: relative;
+        display: block;
+        height: 300px;
+        width: 300px;
+        cursor: pointer;
+        background-color: rgb(250, 192, 18);
+
+        img {
+            transition: 0.3s;
+            opacity: 1;
+        }
+
+        &:after {
+                position: absolute;
+                opacity: 0;
+                transition: 0.3s;
+                content: url("/Images/house-ico.png");
+                top: 120px;
+                left: 124px;
+                width: 52px;
+                height: 60px;
+        }
+        &:hover:after {
+            opacity: 1; 
+        }       
+
+        &:hover {
+            background-color: rgba(250, 192, 18,1);
+             
+            img {
+                opacity: 0.2; 
+            }         
+        }       
+
+        .triangle {
+            position: absolute;
+            height: 0px;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 30px solid transparent;
+            border-top: 30px solid transparent;
+        }
+    }
+}
+.apart-box {
+    position: relative;
+    display: inline-table;
+    width: 600px; 
+
+    .active {
+        &:after {
+            opacity: 1; 
+        }       
+
+        & {
+            background-color: rgba(250, 192, 18,1);
+             
+            img {
+                opacity: 0.2; 
+            }         
+        }    
+    }
+    .side {
+        display: inline-table;
+        width: 270px;
+        padding: 15px;
+        text-align: center;
+
+        .name {
+            color: rgb(250, 192, 18);
+        }
+
+        .city,
+        .street,
+        .name,
+        .capacity {
+            margin: 0px;  
+            font-size: 18px;
+            font-family: "Open Sans";
+            font-weight: 400;
+            line-height: 1.333;
+        }
+        .city,
+        .capacity {
+            margin-top: 30px;
+        }     
+    } 
+}
+
+.button {
+    display: inline-block;
+    transition: 0.3s;
+    margin-top: 25px;
+    padding: 10px 20px;
+    border-width: 1px;
+    border-color: rgb(12, 46, 59);
+    border-style: solid;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Open Sans";
+    line-height: 24px;
+    vertical-align: text-top;
+    background-color: rgb(12, 46, 59);
+    cursor: pointer;
+    
+    &:hover {
+        color: rgb(250, 192, 18);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .ecran2 {
+        width: 1200px; 
+    }
+    .container {
+        position: relative;
+        display: table;
+
+        .side {
+            text-align: left;
+        }
+
+        .ecran2-img {
+            float: right;
+
+            .triangle {
+                top: 120px;
+                left: 0px;
+                border-left: 30px solid #fff;
+                border-right: 30px solid transparent;
+            }
+        }
+
+        div:nth-child(4n+1) .ecran2-img {
+            float: left;
+
+            .triangle {
+                top: 120px;
+                right: 0px;
+                border-left: 30px solid transparent;
+                border-right: 30px solid #fff;
+            }
+        }
+
+        div:nth-child(4n+2) .ecran2-img {
+            float: left;
+
+            .triangle {
+                top: 120px;
+                right: 0px;
+                border-left: 30px solid transparent;
+                border-right: 30px solid #fff;
+            }   
+        }
+    } 
+}
+
+@media only screen and (min-width: 640px) and (max-width: 1200px) {
+    .ecran2 {
+        width: 600px;
+    }
+    .container {
+        .side {
+            text-align: left;
+        }
+        
+        div:nth-child(2n+2) .ecran2-img {
+            float: right;
+
+            .triangle {
+                top: 120px;
+                left: -1px;
+                border-left: 30px solid #fff;
+                border-right: 30px solid transparent;
+            }
+        }
+        div:nth-child(2n+1) .ecran2-img{
+            float: left; 
+
+            .triangle {
+                top: 120px;
+                right: -1px;
+                border-left: 30px solid transparent;
+                border-right: 30px solid #fff;
+            } 
+        }  
+    } 
+}
+
+@media only screen and (max-width: 640px)   {
+    .container {
+
+        .ecran2-img .triangle {
+            bottom: -1px;
+            left: 120px;
+            border-bottom: 30px solid #fff;
+        }
+    }
+}

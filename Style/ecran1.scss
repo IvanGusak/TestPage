@@ -1,0 +1,65 @@
+.body {
+    position: relative;
+    display: block;
+    width: 100%;
+    top: 85px;
+}
+.ecran1 {
+    position: relative;
+    display: block;
+    height: 620px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    background:url("/Images/bg1.png");
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-size: 1920px 620px;
+    overflow-X: hidden;
+    z-index: 1;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgb(12, 46, 59);
+        opacity: 0.4;
+        z-index: 1;
+    }
+}
+.theme-text1,
+.theme-text2,
+.take-apartment {
+    position: relative;
+    font-family: "Open Sans";
+    font-weight: bold;
+    margin: 15px auto;
+    color: #fff;
+    z-index: 10;
+    cursor: default;
+}
+.theme-text1   {
+    font-size: 30px;
+    text-transform: uppercase; 
+}
+.theme-text2 {
+    font-size: 30px; 
+}
+.take-apartment {
+    transition: 0.3s;
+    font-size: 18px;
+    padding: 10px 30px;
+    text-transform: uppercase; 
+    border: 2px solid #fff;
+    cursor: pointer;
+
+    &:hover {
+        color: rgb(250, 192, 18);
+        border-color: rgb(250, 192, 18);
+    }
+}

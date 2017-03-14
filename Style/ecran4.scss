@@ -1,0 +1,307 @@
+.ecran4 {
+    display: block;
+    width: 1200px;
+    margin: 0px auto;
+    cursor: default;
+    font-family: "Open Sans";
+    font-weight: 700;
+    color: rgb(12, 46, 59);
+
+
+}
+
+.ecran4-container {
+    display: table; 
+}
+
+.ecran4-img1 {
+    display: inline-table;
+    width: 600px;
+    height: 540px;
+    background:url("/Images/house5.png");
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-size: 600px 540px; 
+    float: left;
+}
+
+.ecran4-box {
+    display: inline-table;
+    width: 600px;
+
+    .change {
+        margin-left: 20px;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: underline;
+        cursor: pointer;
+        color: rgb(12, 46, 59);  
+    }
+    .button {
+        position: relative;
+        margin-top: 60px;
+        margin-left: 15px;
+        padding: 10px 18px;
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+            color: rgb(250, 192, 18);
+        }
+    }
+}
+
+
+.house-name {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 15px 0px;
+    font-size: 24px;
+    color: rgb(250, 192, 18);  
+}
+
+.capacity-container {
+    display: table;
+
+    p {
+        display: inline-table;
+        margin: 10px;
+        margin-left: 20px;
+        font-weight: 700;
+        font-size: 18px;
+    }
+}
+
+.capacity-box {
+    display: inline-table;
+    float: right;
+
+    .active:before  {
+        border-color: rgb(250, 192, 18);
+        background-color: rgb(250, 192, 18);
+    }
+}
+
+.flat-toggle {
+    position: relative;
+    display: inline-table;
+    width: 68px;
+    height: 28px;
+    padding: 0px 10px;
+    margin: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: right;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 28px; 
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    cursor: pointer; 
+
+    &:before {
+        position: absolute;
+        transition: 0.3s;
+        content: "";
+        width: 15px;
+        height: 15px;
+        margin: auto 0px;
+        top: 0px;
+        bottom: 0px;
+        left: 6.5px;
+        border-radius: 50%;
+        border: 1px solid rgb(204, 204, 204); 
+            
+    }  
+}
+
+.balcony-container {
+    display: table;
+    width: 100%;
+
+    p {
+        display: inline-table;
+        width: 84px;
+        margin: 15px 10px;
+        margin-left: 20px;
+        font-weight: 700;
+        font-size: 18px;
+        float: left;
+    }
+
+    .active:after {
+        transform: translateX(-10px);
+    }
+}
+
+.balcony-toggle {
+    position: relative;
+    display: inline-table;
+    height: 28px;
+    width: 70px;
+    padding: 0px 15px;
+    margin: 10px;
+    line-height: 28px;
+    font-weight: 700;
+    font-size: 14px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 28px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    cursor: pointer;
+
+    &:before {
+        position: absolute;
+        content: "";
+        margin: auto 0px;
+        top: 0px;
+        bottom: 0px;
+        right: 15px;
+        width: 28px;
+        height: 11px;
+        border: 1px solid rgb(215, 215, 215);
+        border-radius: 11px;
+    }
+
+    &:after {
+        position: absolute;
+        content: "";
+        transition: 0.3s;
+        margin: auto 0px;
+        top: 0px;
+        bottom: 0px;
+        right: 15px;
+        width: 20px;
+        height: 20px;     
+        border-radius: 50%;
+        background-color: rgb(250, 192, 18);      
+    }
+}
+
+.rooms-container {
+    display: table;
+
+    .rooms-box {
+        position: relative;
+        display: inline-table;
+        margin: 15px;
+        width: 300px; 
+    }
+
+    p {
+        display: inline-table;
+        margin: 30px 10px;
+        margin-left: 20px;
+        //font-weight: 700;
+        font-size: 18px;
+        float: left;
+        color: rgb(12, 46, 59);
+    }
+}
+.rooms-table {
+    position: relative;
+    display: inline-table;
+    margin: 15px;
+    width: 300px;
+}
+
+.room-ceil {
+    display: inline-table;
+    transition: 0.3s;
+    margin: 2px;
+    width: 30px;
+    height: 24px;
+    font-size: 16px;
+    //font-weight: 900;
+    text-align: center;
+    line-height: 24px;
+    border: 1px solid rgb(204, 204, 204);
+    float: left;
+    cursor: pointer;
+
+    &:hover {
+        border-color: rgba(250, 192, 18,1);
+    }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 640px) {
+    .ecran4 {
+        width: 600px;
+        margin: 0px auto;
+        overflow: hidden;
+    }
+    .ecran4-img1 {
+        display: table;
+    }
+    .rooms-box .button {
+        margin-left: 15px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .ecran4 {
+        position: relative;
+        width: 330px;
+        overflow: hidden;
+        
+    }
+
+    .ecran4-img1 {
+        display: table;
+        width: 330px;
+        height: 290px;
+        background:url("/Images/house5.png");
+        background-repeat: no-repeat;
+        background-origin: content-box;
+        background-size: 330px 290px;
+        
+    }
+
+    .ecran4-box {
+        width: 100%;
+        position: relative;
+
+        .change {
+            position: relative;
+            display: block;
+            width: 55px;
+            left: 50%;
+            margin-bottom: 20px;
+            transform: translateX(-45px);
+        }
+
+        .house-name {
+            width: 85%;
+            text-align: center
+        }
+    }
+    .rooms-container .rooms-box {
+        margin: 0px;
+        width: 330px;
+
+        .rooms-table {
+            display: block;
+        }
+
+        .button {
+            margin: 60px 28px;
+        }
+    }
+
+    .ecran4-container {
+        & p {
+            display: block;
+            width: 90%;
+            text-align: center;
+        }
+        
+    }
+    .balcony-toggle {
+        position: relative;
+        left: 50%;
+        transform: translateX(-55px);
+       // margin: 0px auto;
+    }
+    
+}
+
