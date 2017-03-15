@@ -218,7 +218,7 @@ address {
   flex-direction: column;
   text-align: center;
   align-content: center;
-  background: dir("./Images/bg1.png");
+  background: url(/../Images/bg1.png);
   background-repeat: no-repeat;
   background-origin: content-box;
   background-size: 1920px 620px;
@@ -307,7 +307,7 @@ address {
       position: absolute;
       opacity: 0;
       transition: 0.3s;
-      content: url("/Images/house-ico.png");
+      content: url(/Images/house-ico.png);
       top: 120px;
       left: 124px;
       width: 52px;
