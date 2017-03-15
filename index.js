@@ -41,7 +41,7 @@ function attachEvent() {
 }
 
 
-httpGet("/json/apartment.json")
+httpGet("json/apartment.json")
 	.then(
 		response => renderHouse("container", response),
 		error => alert(`Rejected: ${error}`)
