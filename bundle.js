@@ -55,7 +55,7 @@
 
 	__webpack_require__(2);
 
-	var _smoothScroll = __webpack_require__(6);
+	__webpack_require__(6);
 
 	var _script = __webpack_require__(7);
 
@@ -160,7 +160,7 @@
 	}).then(function () {
 		attachEvent();
 	}).then(function () {
-		_smoothScroll.smooth_scroll.init({
+		smooth_scroll.init({
 			header_id: "header",
 			ignore_links: ["header", "footer"]
 		});
