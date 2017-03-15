@@ -19,7 +19,7 @@ function renderHouse(className, json) {
                     <p class="city">${ house.address.city }</p>
                     <p class="street">${ house.address.street }</p>
                     <p class="capacity">${ house.capacity }</p>
-                    <a class="button">Обрати квартиру</a>
+                    <a href="#apartments" class="button">Обрати квартиру</a>
                 </div>
             </div>
             `

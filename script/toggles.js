@@ -44,4 +44,10 @@ function houseToggle() {
     renderFlats(houseName, number, (balcony == "так") ? true : false);
 } 
 
-export { flatToggle, houseToggle };
+function menuToggle(event) {
+    let elem = event.currentTarget;
+
+    elem.classList.toggle("active");
+}
+
+export { flatToggle, houseToggle, menuToggle };

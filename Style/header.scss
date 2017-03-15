@@ -1,9 +1,9 @@
 .header {
-  position: absolute;
+  position: relative;
   left: 0px;
   right: 0px;
   display: block;
-  height: 85px;
+  height: 90px;
   padding: 0px 24px;
   margin: 0px;
   font-size: 16px;
@@ -11,32 +11,35 @@
   font-weight: bold;
   text-transform: uppercase; 
   color: rgb(12, 46, 59); 
-  overflow: hidden;
 }
+
 .menu {
-    position: absolute;
-    display: inline-block;
-    height: 85px;
-    width: 100%;
-    margin: 0 200px;
-    overflow: hidden;
+    position: relative;
+    display: inline-table;
+    transition: 0.3s;
+    height: 90px;
+    width: 65%;
+    margin: 0 3% 0 17%;
 }
 .menu-item {
-    position: relative;
-    display: inline-block;
+    display: inline-table;
     transition: 0.3s;
     margin: 30px  10px;
     cursor: pointer;
+    text-decoration: none;
+    color: rgb(12, 46, 59);
     &:hover {
         color: #ffcc00; 
     }
 }
 .logo {
     position: relative;
-    display: inline-block;
+    display: inline-table;
     padding: 14px;
     overflow: hidden; 
+    float: left;
     cursor: default;
+    z-index: 3;
 }
 .logo-sub-text {
     display: inline-block;
@@ -52,4 +55,58 @@
     }
 }
 
+@media only screen and (max-width: 1200px) {
+    .header {
+        padding: 0px;
+        width: 100%;
+    }
 
+    .menu {
+        position: absolute;
+        display: block; 
+        width: 160px;
+        right: 0px;
+        left: 0px;
+        margin: 0px auto;
+        z-index: 2;
+        background-color: #fff;
+        overflow: hidden;
+
+        &:hover:before {
+            color: rgb(250, 192, 18);
+        }
+
+        &:before {
+            position: relative;
+            display: table;
+            transition: 0.3s;
+            content: "MENU";
+            width: 160px;
+            height: 90px;
+            text-align: center;
+            line-height: 90px;
+            vertical-align: middle;
+            border-bottom: 1px solid rgb(250, 192, 18);
+            cursor: pointer;
+            color: rgb(12, 46, 59); 
+            
+        }    
+
+        .menu-item {
+            display: table;
+            width: 140px;
+            margin: 10px;
+            background-color: #fff;
+        }   
+    }
+
+    .active {
+        height: 230px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .menu {
+        margin-left: 50%;
+    }
+}

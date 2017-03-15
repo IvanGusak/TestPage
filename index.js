@@ -5,23 +5,21 @@ import {
     httpGet,
     renderFlats,
     flatToggle,
-    houseToggle
+    houseToggle,
+	menuToggle
  } from "./script/";
-
-
-
-
 
 let flat;
 let balcony;
 let houses;
 let button;
+let menu;
 
 function getDom() {
 	flat = document.getElementsByClassName("flat-toggle");
 	balcony = document.getElementsByClassName("balcony-toggle");
 	houses = document.getElementsByClassName("ecran2-img");
-
+	menu = document.getElementById("menu");
 }
 
 function attachEvent() {
@@ -37,6 +35,7 @@ function attachEvent() {
 		elem.addEventListener("click", houseToggle);
 	}
 
+	menu.addEventListener("click", menuToggle);
 }
 
 
@@ -50,6 +49,12 @@ httpGet("/json/apartment.json")
 	})
 	.then(() => {
 		attachEvent()
+	})
+	.then(() => {
+		smooth_scroll.init({
+					header_id : "header",
+					ignore_links: ["header", "footer"]
+				});
 	})
 
 renderFlats(`Житловий масив \"Затишок Дніпра\"`, 1, false);

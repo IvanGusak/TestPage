@@ -11,30 +11,30 @@
 		
 	</head>
 	<body>	
-		<header class="header">
+		<header id="header" class="header">
 			<div class="logo">	
 				<img src="Images/logo.png" alt="">
 				<span class="logo-sub-text">Building<br>Company</span>
 			</div>
-			<nav class="menu">
-				<a class="menu-item">ми</a>
-				<a class="menu-item">продукція</a>
-				<a class="menu-item">квартири</a>
-				<a class="menu-item">наші переваги</a>
-				<a class="menu-item">контакти</a>
+			<nav id="menu" class="menu">
+				<a href="#we" class="menu-item">ми</a>
+				<a href="#production" class="menu-item">продукція</a>
+				<a href="#apartments" class="menu-item">квартири</a>
+				<a href="#advantages" class="menu-item">наші переваги</a>
+				<a href="#contacts" class="menu-item">контакти</a>
 			</nav>
 		</header>
 		<div class="body">
 			<div class="ecran1">	
 				<p class="theme-text1">Building Company</p>
 				<p class="theme-text2">Ми будуємо для вас краще майбутнє</p>
-				<a class="take-apartment">Обрати квартиру</a>
+				<a href="#apartments" class="take-apartment">Обрати квартиру</a>
 			</div>
-			<div class="ecran2">	
+			<div id="houses" class="ecran2">	
 				<div class="title">Житлові комплекси</div>
 				<div class="container"></div>
 			</div>
-			<div class="ecran3">
+			<div id="production" class="ecran3">
 				<p>Ми будуємо для <span>ВАС</span> вас найкращі, сучасні, затишні квартири </p>
 				<div class="ecran3-container">
 					<div class="ecran3-box">
@@ -47,14 +47,14 @@
 					</div>	
 				</div>
 			</div>
-			<div class="ecran4">
+			<div id="apartments" class="ecran4">
 				<div class="title">Житловий масив</div>
 				<div class="ecran4-container">
 					<div class="ecran4-img1"></div>
 					<div class="ecran4-box">
 						<div>
 							<p class="house-name">Житловий масив "Затишок Дніпра"</p>
-							<a class="change">змінити</a>
+							<a href="#houses" class="change">змінити</a>
 						</div>						
 						<div class="capacity-container">
 							<p>Квартира</p>
@@ -74,11 +74,9 @@
 							<p>Номер квартири</p>
 							<div class="rooms-box">
 								<div class="rooms-table"></div>
-								<a class="button">Зв'язатись з менеджером</a>
+								<a href="#feedback" class="button">Зв'язатись з менеджером</a>
 							</div>
-							
 						</div>
-						
 					</div>
 				</div>
 			</div>
@@ -93,7 +91,7 @@
 				</div>
 				
 			</div>
-			<div class="ecran6">
+			<div id="we" class="ecran6">
 				<div class="ecran6-container">
 					<div class="ecran6-box1">
 						<p>Що робить нас</p>
@@ -113,10 +111,10 @@
 					</div>
 					</div>
 			</div>
-			<div class="ecran7">
+			<div id="advantages" class="ecran7">
 				<h1 class="title">Чому обирають нас</h1>
 				<div class="ecran7-container">
-					<a class="up">
+					<a href="#we" class="up">
 						<i class="material-icons md-36">keyboard_arrow_up</i>
 						<span>UP</span>
 					</a>
@@ -164,9 +162,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="ecran8">
+			<div id="feedback" class="ecran8">
 				<div class="ecran8-container">
-					<form class="form" enctype='application/json' method="post">
+					<form class="form" >
 						<h1>НАДІСЛАТИ ПОВІДОМЛЕННЯ</h1>
 						<div class="form-box">
 							<input class="input font" name="message[name]" type="text" placeholder="Ваше Ім'я">
@@ -180,32 +178,62 @@
 							</select>
 						</div>
 						<textarea class="input-text font" name="message[comment]" type="text" placeholder="Напишіть текст..."></textarea>
-						<button type="submit" class="button font">Надіслати листа</button>
+						<div class="button font">Надіслати листа</div>
 					</form>
 				</div>
 			</div>
 		</div>
-		<footer>
+		<footer >
 			<div class="footer-container">
 				<div class="footer-box">
 					<div class="logo">
 						<img src="Images/logo.png" alt="">
 						<span class="logo-sub-text">BUILDING<br>COMPANY</span>
 					</div>
-					<div class="text">Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки</div>
+					<div class="text">
+						Вже давно відомо, 
+						що читабельний зміст буде заважати зосередитись людині, 
+						яка оцінює композицію сторінки. Сенс використання Lorem Ipsum
+						полягає в тому, що цей текс має більш-менш нормальне розподілення
+						літер навідміну від, наприклад "Тут іде текст"
+					</div>
 				</div>
 				<div class="footer-box">
-					<h2 class="title">МЕНЮ</h2>
-					<nav class="menu"></nav>
+					<h3 class="title">МЕНЮ</h3>
+					<nav class="footer-menu">
+						<a href="#we" class="menu-item">ми</a>
+						<a href="#production" class="menu-item">продукція</a>
+						<a href="#apartments" class="menu-item">квартири</a>
+						<a href="#advantages" class="menu-item">наші переваги</a>
+						<a href="#contacts" class="menu-item">контакти</a>
+					</nav>
 				</div>
 				<div class="footer-box">
-					<h2 class="title">АДРЕС</h2>
-					<address></address>
+					<h3 class="title">АДРЕС</h3>
+					<address id="contacts">
+						<div class="address-box">
+							<i class="fa fa-globe fa-2x" aria-hidden="true"></i>
+							<h3>АДРЕС:</h3>
+							<p>м. Івано-Франківськ<br>вул. Шопена 3</p>
+						</div>
+						<div class="address-box">
+							<i class="fa fa-mobile fa-2x" aria-hidden="true"></i>
+							<h3>ТЕЛЕФОН:</h3>
+							<p>+3 (096) 653 12 14<br>+3 (096) 653 12 14</p>
+						</div>
+						<div class="address-box">
+							<i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
+							<h3>Email:</h3>
+							<p>mail@gmail.com</p>
+						</div>
+					</address>
 				</div>
 				
 			</div>
-			<h2 class="bottom-text">BUILDING COMPANY 2017 &copy All Rights Reserved</h2>
+			<h3 class="bottom-text">BUILDING COMPANY 2017 &copy All Rights Reserved</h3>
 		</footer>
 		<script src="bundle.js"></script>
+		<script type="text/javascript" src="/script/smooth/smoothScroll.js"></script>
+		</script>
 	</body>
 </html>

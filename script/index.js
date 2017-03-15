@@ -6,4 +6,4 @@ export { flatGenerator, randomFlat } from "./flatGenerator";
 
 export { renderFlats } from "./renderFlats";
 
-export { flatToggle, houseToggle } from "./toggles";
+export { flatToggle, houseToggle, menuToggle } from "./toggles";
