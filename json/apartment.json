@@ -6,7 +6,7 @@
             "street": "вул. Набережна 103"
         },
         "capacity": "145 КВАРТИР",
-        "img": "/Images/house1.png"
+        "img": "/TestPage/Images/house1.png"
     },
     {
         "name": "Житловий масив \"Велика сімя\"",
@@ -15,7 +15,7 @@
             "street": "вул. Галицька 203"
         },
         "capacity": "250 КВАРТИР",
-        "img": "/Images/house2.png"
+        "img": "/TestPage/Images/house2.png"
     },
     {
         "name": "Житловий масив \"Новий Дім\"",
@@ -24,7 +24,7 @@
             "street": "вул. Незалежна 25"
         },
         "capacity": "325 КВАРТИР",
-        "img": "/Images/house3.png"
+        "img": "/TestPage/Images/house3.png"
     },
     {
         "name": "Житловий масив \"Затишний Дім\"",
@@ -33,6 +33,6 @@
             "street": "вул. Бандери 50"
         },
         "capacity": "205 КВАРТИР",
-        "img": "/Images/house4.png"
+        "img": "/TestPage/Images/house4.png"
     }
 ]

@@ -8,7 +8,7 @@
     background-repeat: no-repeat;
     background-origin: content-box;
     background-size: 1920px 300px; 
-    background-image: url("/Images/bg2.png");
+    background-image: url("/TestPage/Images/bg2.png");
     z-index: -1;
 
     &:after {
@@ -108,7 +108,7 @@
 }
 
 .ecran6-box2:after {
-    background-image: url("/Images/ecran6-ico1.png");
+    background-image: url("/TestPage/Images/ecran6-ico1.png");
 }
 
 .ecran6-box3:after {
@@ -116,14 +116,14 @@
     height: 90px;
     top: 30px;
     background-size: 80px 90px;
-    background-image: url("/Images/ecran6-ico2.png");
+    background-image: url("/TestPage/Images/ecran6-ico2.png");
 }
 
 .ecran6-box4:after {
     top: 10px;
     height: 120px;
     background-size: 100px 120px;
-    background-image: url("/Images/ecran6-ico3.png");
+    background-image: url("/TestPage/Images/ecran6-ico3.png");
 }
 
 @media only screen and (min-width: 640px) and (max-width: 1200px) {

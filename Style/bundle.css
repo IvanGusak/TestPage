@@ -307,7 +307,7 @@ address {
       position: absolute;
       opacity: 0;
       transition: 0.3s;
-      content: url(/Images/house-ico.png);
+      content: url(/TestPage/Images/house-ico.png);
       top: 120px;
       left: 124px;
       width: 52px;
@@ -443,7 +443,7 @@ address {
   flex-direction: column;
   text-align: center;
   align-content: center;
-  background: url("/Images/ecran3.png");
+  background: url("/TestPage/Images/ecran3.png");
   background-repeat: no-repeat;
   background-origin: content-box;
   background-size: 1920px 370px;
@@ -566,7 +566,7 @@ address {
   display: inline-table;
   width: 600px;
   height: 540px;
-  background: url("/Images/house5.png");
+  background: url("/TestPage/Images/house5.png");
   background-repeat: no-repeat;
   background-origin: content-box;
   background-size: 600px 540px;
@@ -752,7 +752,7 @@ address {
     display: table;
     width: 330px;
     height: 290px;
-    background: url("/Images/house5.png");
+    background: url("/TestPage/Images/house5.png");
     background-repeat: no-repeat;
     background-origin: content-box;
     background-size: 330px 290px; }
@@ -802,7 +802,7 @@ address {
   display: block;
   width: 675px;
   height: 380px;
-  background: url("/Images/level-plan.png");
+  background: url("/TestPage/Images/level-plan.png");
   background-repeat: no-repeat;
   background-origin: content-box;
   background-size: 675px 380px;
@@ -820,13 +820,13 @@ address {
   float: left; }
 
 .ecran5-img2 {
-  background: url("/Images/variant1.png"); }
+  background: url("/TestPage/Images/variant1.png"); }
 
 .ecran5-img3 {
-  background: url("/Images/variant2.png"); }
+  background: url("/TestPage/Images/variant2.png"); }
 
 .ecran5-img4 {
-  background: url("/Images/variant3.png"); }
+  background: url("/TestPage/Images/variant3.png"); }
 
 .plan-container {
   position: relative;
@@ -872,7 +872,7 @@ address {
   background-repeat: no-repeat;
   background-origin: content-box;
   background-size: 1920px 300px;
-  background-image: url("/Images/bg2.png");
+  background-image: url("/TestPage/Images/bg2.png");
   z-index: -1; }
   .ecran6:after {
     position: absolute;
@@ -957,20 +957,20 @@ address {
   z-index: -1; }
 
 .ecran6-box2:after {
-  background-image: url("/Images/ecran6-ico1.png"); }
+  background-image: url("/TestPage/Images/ecran6-ico1.png"); }
 
 .ecran6-box3:after {
   width: 80px;
   height: 90px;
   top: 30px;
   background-size: 80px 90px;
-  background-image: url("/Images/ecran6-ico2.png"); }
+  background-image: url("/TestPage/Images/ecran6-ico2.png"); }
 
 .ecran6-box4:after {
   top: 10px;
   height: 120px;
   background-size: 100px 120px;
-  background-image: url("/Images/ecran6-ico3.png"); }
+  background-image: url("/TestPage/Images/ecran6-ico3.png"); }
 
 @media only screen and (min-width: 640px) and (max-width: 1200px) {
   .ecran6 {
@@ -1161,7 +1161,7 @@ address {
   background-repeat: no-repeat;
   background-origin: content-box;
   background-size: 1920px 630px;
-  background-image: url("/Images/bg3.png"); }
+  background-image: url("/TestPage/Images/bg3.png"); }
 
 .ecran8-container {
   position: relative;
