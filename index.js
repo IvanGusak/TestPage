@@ -1,6 +1,6 @@
 import "./Style/styles.scss";
 
-import { smooth_scroll } from  "./script/smooth/smoothScroll";
+import { smooth_scroll, init } from  "./script/smooth/smoothScroll";
 
 import { 
     renderHouse,
