@@ -163,24 +163,24 @@
 		getDom();
 	}).then(function () {
 		attachEvent();
+	}).then(function () {
+		(0, _jquery311Min2.default)(function () {
+			(0, _jquery311Min2.default)('a[href*="#"]:not([href="#"])').click(function () {
+				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+					var target = (0, _jquery311Min2.default)(this.hash);
+					target = target.length ? target : (0, _jquery311Min2.default)('[name=' + this.hash.slice(1) + ']');
+					if (target.length) {
+						(0, _jquery311Min2.default)('html, body').animate({
+							scrollTop: target.offset().top
+						}, 1000);
+						return false;
+					}
+				}
+			});
+		});
 	});
 
 	(0, _script.renderFlats)("\u0416\u0438\u0442\u043B\u043E\u0432\u0438\u0439 \u043C\u0430\u0441\u0438\u0432 \"\u0417\u0430\u0442\u0438\u0448\u043E\u043A \u0414\u043D\u0456\u043F\u0440\u0430\"", 1, false);
-
-	(0, _jquery311Min2.default)(function () {
-		(0, _jquery311Min2.default)('a[href*="#"]:not([href="#"])').click(function () {
-			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-				var target = (0, _jquery311Min2.default)(this.hash);
-				target = target.length ? target : (0, _jquery311Min2.default)('[name=' + this.hash.slice(1) + ']');
-				if (target.length) {
-					(0, _jquery311Min2.default)('html, body').animate({
-						scrollTop: target.offset().top
-					}, 1000);
-					return false;
-				}
-			}
-		});
-	});
 
 /***/ },
 /* 2 */
