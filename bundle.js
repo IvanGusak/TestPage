@@ -74,6 +74,7 @@
 		balcony = document.getElementsByClassName("balcony-toggle");
 		houses = document.getElementsByClassName("ecran2-img");
 		menu = document.getElementById("menu");
+		button = document.querySelector("#submit");
 	}
 
 	function attachEvent() {
@@ -153,9 +154,10 @@
 		}
 
 		menu.addEventListener("click", _script.menuToggle);
+		button.addEventListener("click", _script.submitForm);
 	}
 
-	(0, _script.httpGet)("json/apartment.json").then(function (response) {
+	(0, _script.httpGet)("/json/apartment.json").then(function (response) {
 		return (0, _script.renderHouse)("container", response);
 	}, function (error) {
 		return alert("Rejected: " + error);
@@ -2582,6 +2584,15 @@
 	  }
 	});
 
+	var _submitForm = __webpack_require__(15);
+
+	Object.defineProperty(exports, "submitForm", {
+	  enumerable: true,
+	  get: function get() {
+	    return _submitForm.submitForm;
+	  }
+	});
+
 /***/ },
 /* 10 */
 /***/ function(module, exports, __webpack_require__) {
@@ -2838,6 +2849,71 @@
 	exports.flatToggle = flatToggle;
 	exports.houseToggle = houseToggle;
 	exports.menuToggle = menuToggle;
+
+/***/ },
+/* 15 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	var check = {
+	    Name: function Name(name) {
+	        var letters = /^[A-Za-z]+$/;
+	        return name.match(letters) ? true : false;
+	    },
+	    Email: function Email(email) {
+	        var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	        return email.match(mailFormat) ? true : false;
+	    },
+	    Phone: function Phone(phone) {
+	        var numberFormat = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+	        return phone.match(numberFormat) ? true : false;
+	    },
+	    Text: function Text() {
+	        return true;
+	    },
+	    Topic: function Topic() {
+	        return true;
+	    }
+	};
+
+	function submitForm() {
+	    var name = document.Form.Name;
+	    var email = document.Form.Email;
+	    var phone = document.Form.Phone;
+	    var topic = document.Form.Topic;
+	    var text = document.Form.Text;
+
+	    var obj = {
+	        "Name": name.value,
+	        "Email": email.value,
+	        "Phone": phone.value,
+	        "Topic": topic.value,
+	        "Text": text.value
+	    };
+	    for (var item in obj) {
+	        if (obj[item] == "") {
+	            document.Form[item].classList.add("error");
+	            document.Form[item].focus();
+	            return false;
+	        } else {
+	            if (!check[item](obj[item])) {
+	                document.Form[item].focus();
+	                document.Form[item].classList.add("error");
+	                return false;
+	            }
+	            document.Form[item].classList.remove("error");
+	        }
+	    }
+	    console.log(obj);
+	    name.value = phone.value = email.value = topic.value = text.value = "";
+	    return obj;
+	}
+
+	exports.submitForm = submitForm;
 
 /***/ }
 /******/ ]);
