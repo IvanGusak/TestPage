@@ -157,7 +157,7 @@
 		button.addEventListener("click", _script.submitForm);
 	}
 
-	(0, _script.httpGet)("/json/apartment.json").then(function (response) {
+	(0, _script.httpGet)("./json/apartment.json").then(function (response) {
 		return (0, _script.renderHouse)("container", response);
 	}, function (error) {
 		return alert("Rejected: " + error);
