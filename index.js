@@ -1,6 +1,7 @@
 import "./Style/styles.scss";
 
-import  "./script/smooth/smoothScroll";
+import $ from "./script/jquery-3.1.1.min.js";
+
 
 import { 
     renderHouse,
@@ -52,11 +53,20 @@ httpGet("json/apartment.json")
 	.then(() => {
 		attachEvent()
 	})
-	.then(() => {
-		smooth_scroll.init({
-					header_id : "header",
-					ignore_links: ["header", "footer"]
-				});
-	})
 
 renderFlats(`Житловий масив \"Затишок Дніпра\"`, 1, false);
+
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
