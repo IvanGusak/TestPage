@@ -8,7 +8,8 @@ import {
     renderFlats,
     flatToggle,
     houseToggle,
-	menuToggle
+	menuToggle,
+	submitForm
  } from "./script/";
 
 let flat;
@@ -17,11 +18,14 @@ let houses;
 let button;
 let menu;
 
+
+
 function getDom() {
 	flat = document.getElementsByClassName("flat-toggle");
 	balcony = document.getElementsByClassName("balcony-toggle");
 	houses = document.getElementsByClassName("ecran2-img");
 	menu = document.getElementById("menu");
+	button = document.querySelector("#submit");
 }
 
 function attachEvent() {
@@ -38,6 +42,7 @@ function attachEvent() {
 	}
 
 	menu.addEventListener("click", menuToggle);
+	button.addEventListener("click", submitForm);
 }
 
 
