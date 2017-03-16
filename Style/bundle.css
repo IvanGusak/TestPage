@@ -108,7 +108,8 @@ footer {
     color: #fff;
     font-size: 16px; }
   footer .logo {
-    display: block; }
+    display: block;
+    float: none; }
   footer .bottom-text {
     position: relative;
     display: block;
