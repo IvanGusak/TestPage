@@ -1,5 +1,7 @@
 import "./Style/styles.scss";
 
+import $ from "./script/jquery-3.1.1.min.js";
+
 import { 
     renderHouse,
     httpGet,
@@ -51,10 +53,20 @@ httpGet("/json/apartment.json")
 		attachEvent()
 	})
 	.then(() => {
-		smooth_scroll.init({
-					header_id : "header",
-					ignore_links: ["header", "footer"]
-				});
+		$(function() {
+			$('a[href*="#"]:not([href="#"])').click(function() {
+				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				if (target.length) {
+					$('html, body').animate({
+					scrollTop: target.offset().top
+					}, 1000);
+					return false;
+				}
+				}
+			});
+		});
 	})
 
 renderFlats(`Житловий масив \"Затишок Дніпра\"`, 1, false);
