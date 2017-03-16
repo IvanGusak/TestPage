@@ -2,14 +2,14 @@ import "./Style/styles.scss";
 
 import $ from "./script/jquery-3.1.1.min.js";
 
-
 import { 
     renderHouse,
     httpGet,
     renderFlats,
     flatToggle,
     houseToggle,
-	menuToggle
+	menuToggle,
+	submitForm
  } from "./script/";
 
 let flat;
@@ -23,6 +23,7 @@ function getDom() {
 	balcony = document.getElementsByClassName("balcony-toggle");
 	houses = document.getElementsByClassName("ecran2-img");
 	menu = document.getElementById("menu");
+	button = document.querySelector("#submit");
 }
 
 function attachEvent() {
@@ -39,10 +40,11 @@ function attachEvent() {
 	}
 
 	menu.addEventListener("click", menuToggle);
+	button.addEventListener("click", submitForm);
 }
 
 
-httpGet("json/apartment.json")
+httpGet("/json/apartment.json")
 	.then(
 		response => renderHouse("container", response),
 		error => alert(`Rejected: ${error}`)
@@ -71,5 +73,3 @@ httpGet("json/apartment.json")
 	})
 
 renderFlats(`Житловий масив \"Затишок Дніпра\"`, 1, false);
-
-

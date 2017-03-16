@@ -164,21 +164,21 @@
 			</div>
 			<div id="feedback" class="ecran8">
 				<div class="ecran8-container">
-					<form class="form" >
+					<form class="form" name="Form">
 						<h1>НАДІСЛАТИ ПОВІДОМЛЕННЯ</h1>
 						<div class="form-box">
-							<input class="input font" name="name" type="text" placeholder="Ваше Ім'я">
-							<input class="input font" name="email" type="text" placeholder="Ваш EMAIL">
-							<input class="input font" name="phone" type="text" placeholder="Номер телефона">
-							<select class="input font" name="topic" placeholder="Номер телефона" >
+							<input class="input font" name="Name" type="text" placeholder="Ваше Ім'я">
+							<input class="input font" name="Email" type="text" placeholder="Ваш EMAIL">
+							<input class="input font" name="Phone" type="text" placeholder="Номер телефона">
+							<select name="Topic" class="input font" >
 								<option value="" disabled selected>Оберіть тему</option>
 								<option value="buy">Купівля</option>
 								<option value="credit">Оренда</option>
 								<option value="question">Інше</option>
 							</select>
 						</div>
-						<textarea class="input-text font" name="comment" type="text" placeholder="Напишіть текст..."></textarea>
-						<div class="button font">Надіслати листа</div>
+						<textarea name="Text" class="input-text font" type="text" placeholder="Напишіть текст..."></textarea>
+						<div id="submit" class="button font">Надіслати листа</div>
 					</form>
 				</div>
 			</div>
@@ -187,7 +187,7 @@
 			<div class="footer-container">
 				<div class="footer-box">
 					<div class="logo">
-						<img src="/TestPage/Images/logo.png" alt="">
+						<img src="Images/logo.png" alt="">
 						<span class="logo-sub-text">BUILDING<br>COMPANY</span>
 					</div>
 					<div class="text">
