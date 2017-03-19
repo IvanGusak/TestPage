@@ -57,7 +57,7 @@
     .ecran3-box {
         display: inline-table;
         position: relative;
-        width: 600px;
+        //width: 600px;
         height: 130px;
         margin: 0px;   
     }
@@ -74,11 +74,11 @@
     }   
 }
 
-.ecran3-box > div:nth-child(1) {
+.ecran3-box:nth-child(1) > div {
     background:url("/Images/house-ico2.png");
 }
 
-.ecran3-box > div:nth-child(2) > div {
+.ecran3-box:nth-child(2) > div {
     background:url("/Images/house-ico3.png");
 }
 
@@ -114,7 +114,7 @@
     }
     .ecran3-container {
         margin: 0px auto;
-        width: 360px;
+        width: 370px;
 
         p {
             margin: 0px;
@@ -128,13 +128,12 @@
             }
         }
         .ecran3-box {
-            display: inline-block;
             width: 180px; 
         }
         .ecran3-box > div {
             display: block;
             height: 80px;
-            width: 180px;
+            width: 170px;
             margin: 0px auto;
             background-size: 80px 80px;
             background-position: center; 
