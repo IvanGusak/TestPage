@@ -18,6 +18,8 @@ let houses;
 let button;
 let menu;
 
+
+
 function getDom() {
 	flat = document.getElementsByClassName("flat-toggle");
 	balcony = document.getElementsByClassName("balcony-toggle");
@@ -39,7 +41,7 @@ function attachEvent() {
 		elem.addEventListener("click", houseToggle);
 	}
 
-	menu.addEventListener("click", menuToggle);
+	menu.addEventListener("click", menuToggle, true);
 	button.addEventListener("click", submitForm);
 }
 

@@ -5,9 +5,7 @@
     margin: 0px auto;
     margin-bottom: 80px;
     overflow: hidden;
-    cursor: default;
-
-    
+    cursor: default; 
 }
 .title {
     margin: 50px 0px;     
@@ -27,12 +25,9 @@
         border-bottom: 3px solid rgb(250, 192, 18);
     }
 }
-.container {
-    display: table;
-    overflow: hidden;
 
-    
-    
+.container {
+    overflow: hidden;
 
     .ecran2-img {
         position: relative;
@@ -81,7 +76,7 @@
 }
 .apart-box {
     position: relative;
-    display: inline-table;
+    display: inline-block;
     width: 600px; 
 
     .active {
@@ -149,11 +144,11 @@
 
 @media only screen and (min-width: 1200px) {
     .ecran2 {
-        width: 1200px; 
+        width: 1210px; 
     }
     .container {
         position: relative;
-        display: table;
+        display: block;
 
         .side {
             text-align: left;
