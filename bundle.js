@@ -153,7 +153,7 @@
 			}
 		}
 
-		menu.addEventListener("click", _script.menuToggle);
+		menu.addEventListener("click", _script.menuToggle, true);
 		button.addEventListener("click", _script.submitForm);
 	}
 

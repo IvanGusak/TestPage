@@ -4,7 +4,6 @@
   right: 0px;
   display: block;
   height: 90px;
-  padding: 0px 24px;
   margin: 0px;
   font-size: 16px;
   font-family: "Open Sans";
@@ -13,22 +12,24 @@
   color: #0c2e3b; }
 
 .menu {
-  position: relative;
-  display: inline-table;
+  position: absolute;
+  display: inline-block;
   transition: 0.3s;
   height: 90px;
-  width: 65%;
-  margin: 0 3% 0 17%; }
+  width: 580px;
+  margin: 0px auto;
+  left: 0px;
+  right: 0px; }
 
 .menu-item {
-  display: inline-table;
+  display: inline-block;
   transition: 0.3s;
   margin: 30px  10px;
   cursor: pointer;
   text-decoration: none;
   color: #0c2e3b; }
   .menu-item:hover {
-    color: #ffcc00; }
+    color: #fac012; }
 
 .logo {
   position: relative;
@@ -44,52 +45,71 @@
   line-height: 1.2;
   margin-left: -23px; }
 
-@media only screen and (min-width: 1200px) {
-  .header {
-    margin: 0px auto;
-    padding: 0px;
-    width: 1200px; } }
-
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 800px) {
   .header {
     padding: 0px;
     width: 100%; }
   .menu {
     position: absolute;
-    display: block;
+    margin: 0px;
+    left: initial;
+    right: 0px;
     width: 160px;
     right: 0px;
-    left: 0px;
-    margin: 0px auto;
     z-index: 2;
     background-color: #fff;
     overflow: hidden; }
-    .menu:hover:before {
-      color: #fac012; }
-    .menu:before {
+    .menu .menu-toggle {
       position: relative;
-      display: table;
-      transition: 0.3s;
-      content: "MENU";
-      width: 160px;
+      width: 40px;
       height: 90px;
-      text-align: center;
-      line-height: 90px;
-      vertical-align: middle;
-      border-bottom: 1px solid #fac012;
-      cursor: pointer;
-      color: #0c2e3b; }
+      margin: 0px auto;
+      cursor: pointer; }
+      .menu .menu-toggle:after {
+        content: "";
+        display: block;
+        position: absolute;
+        transition: 0.3s;
+        width: 0px;
+        height: 0px;
+        bottom: 0px;
+        left: -60px; }
+      .menu .menu-toggle:hover span {
+        transition: 0.3s;
+        background: #fac012; }
+        .menu .menu-toggle:hover span::before, .menu .menu-toggle:hover span::after {
+          transition: 0.3s;
+          background: #fac012; }
+    .menu .menu-toggle span {
+      display: block;
+      position: relative;
+      top: 42px;
+      left: 0px;
+      right: 0px;
+      height: 6px;
+      width: 40px;
+      background: #0c2e3b; }
+      .menu .menu-toggle span::before, .menu .menu-toggle span::after {
+        position: absolute;
+        display: block;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background-color: #0c2e3b;
+        content: ""; }
+      .menu .menu-toggle span::before {
+        top: -10px; }
+      .menu .menu-toggle span::after {
+        bottom: -10px; }
     .menu .menu-item {
-      display: table;
       width: 140px;
       margin: 10px;
       background-color: #fff; }
   .active {
-    height: 230px; } }
-
-@media only screen and (max-width: 640px) {
-  .menu {
-    margin-left: 50%; } }
+    height: 300px; }
+  .active .menu-toggle:after {
+    width: 160px;
+    border-bottom: 1px solid #fac012; } }
 
 footer {
   position: relative;
@@ -149,11 +169,10 @@ footer {
       border-width: 2px; }
   .footer-box .footer-menu {
     position: relative;
-    display: block;
-    margin-top: 40px; }
+    margin-top: 30px; }
     .footer-box .footer-menu .menu-item {
-      display: block;
-      margin: 20px 0px;
+      margin: 10px 0px;
+      width: 100%;
       line-height: 1;
       font-size: 15px;
       font-weight: 400;
@@ -167,7 +186,7 @@ address {
 .address-box {
   margin: 15px 0px;
   font-style: normal; }
-  .address-box h3, .address-box p {
+  .address-box p {
     display: inline-table;
     margin: 0px 5px;
     font-size: 14px;
@@ -293,7 +312,6 @@ address {
     border-bottom: 3px solid #fac012; }
 
 .container {
-  display: table;
   overflow: hidden; }
   .container .ecran2-img {
     position: relative;
@@ -330,7 +348,7 @@ address {
 
 .apart-box {
   position: relative;
-  display: inline-table;
+  display: inline-block;
   width: 600px; }
   .apart-box .active:after {
     opacity: 1; }
@@ -380,10 +398,10 @@ address {
 
 @media only screen and (min-width: 1200px) {
   .ecran2 {
-    width: 1200px; }
+    width: 1210px; }
   .container {
     position: relative;
-    display: table; }
+    display: block; }
     .container .side {
       text-align: left; }
     .container .ecran2-img {
@@ -449,19 +467,10 @@ address {
   background-repeat: no-repeat;
   background-origin: content-box;
   background-size: 1920px 370px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
   overflow: hidden;
-  cursor: default;
-  z-index: -2; }
-  .ecran3:after {
-    position: absolute;
-    display: block;
-    content: "";
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: -1; }
+  cursor: default; }
   .ecran3 p {
     position: relative;
     margin: 50px auto;
@@ -492,11 +501,9 @@ address {
   .ecran3-container .ecran3-box {
     display: inline-table;
     position: relative;
-    width: 600px;
     height: 130px;
     margin: 0px; }
-  .ecran3-container .ecran3-img1,
-  .ecran3-container .ecran3-img2 {
+  .ecran3-container .ecran3-box > div {
     display: inline-table;
     height: 130px;
     width: 130px;
@@ -505,10 +512,12 @@ address {
     background-origin: content-box;
     background-size: 130px 130px;
     float: left; }
-  .ecran3-container .ecran3-img1 {
-    background: url("/TestPage//Images/house-ico2.png"); }
-  .ecran3-container .ecran3-img2 {
-    background: url("/TestPage//Images/house-ico3.png"); }
+
+.ecran3-box:nth-child(1) > div {
+  background: url("/Images/house-ico2.png"); }
+
+.ecran3-box:nth-child(2) > div {
+  background: url("/Images/house-ico3.png"); }
 
 @media only screen and (min-width: 640px) and (max-width: 1200px) {
   .ecran3-container p {
@@ -518,8 +527,7 @@ address {
       font-size: 36px; }
   .ecran3-container .ecran3-box {
     width: 310px; }
-  .ecran3-container .ecran3-img1,
-  .ecran3-container .ecran3-img2 {
+  .ecran3-container .ecran3-box > div {
     margin-left: 17%;
     height: 100px;
     width: 100px;
@@ -531,7 +539,7 @@ address {
     font-size: 24px; }
   .ecran3-container {
     margin: 0px auto;
-    width: 360px; }
+    width: 370px; }
     .ecran3-container p {
       margin: 0px;
       height: 30px;
@@ -541,13 +549,11 @@ address {
       .ecran3-container p span {
         font-size: 24px; }
     .ecran3-container .ecran3-box {
-      display: inline-block;
       width: 180px; }
-    .ecran3-container .ecran3-img1,
-    .ecran3-container .ecran3-img2 {
+    .ecran3-container .ecran3-box > div {
       display: block;
       height: 80px;
-      width: 180px;
+      width: 170px;
       margin: 0px auto;
       background-size: 80px 80px;
       background-position: center; } }
@@ -874,78 +880,58 @@ address {
   background-repeat: no-repeat;
   background-origin: content-box;
   background-size: 1920px 300px;
-  background-image: url("/TestPage/Images/bg2.png");
-  z-index: -1; }
-  .ecran6:after {
-    position: absolute;
-    display: block;
-    content: "";
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: -2; }
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: multiply;
+  cursor: default;
+  background-image: url("/TestPage/Images/bg2.png"); }
 
 .ecran6-container {
   position: relative;
-  display: table;
+  display: block;
   width: 1200px;
   line-height: 300px;
   height: 300px;
   margin: 0px auto; }
 
-.ecran6-box1,
-.ecran6-box2,
-.ecran6-box3,
-.ecran6-box4 {
+.ecran6-box {
   position: relative;
-  display: inline-table;
-  margin: 15px;
+  display: inline-block;
+  margin: 13px;
   width: 270px;
   height: 140px;
   vertical-align: middle;
   line-height: normal;
-  color: #fff;
-  z-index: -1; }
+  color: #fff; }
 
-.ecran6-box2,
-.ecran6-box3,
-.ecran6-box4 {
+.ecran6-box:not(:nth-child(1)) {
   background-color: #fac012; }
-  .ecran6-box2 h1,
-  .ecran6-box3 h1,
-  .ecran6-box4 h1 {
+  .ecran6-box:not(:nth-child(1)) h1 {
     margin: 20px;
     font-size: 36px;
     text-transform: uppercase; }
-  .ecran6-box2 p,
-  .ecran6-box3 p,
-  .ecran6-box4 p {
+  .ecran6-box:not(:nth-child(1)) p {
     margin: 20px;
     font-size: 16px; }
 
-.ecran6-box1 {
+.ecran6-box:nth-child(1) {
   display: inline-block;
   line-height: 70px;
   text-align: left;
   vertical-align: middle; }
-  .ecran6-box1 h1 {
+  .ecran6-box:nth-child(1) h1 {
     margin: 10px;
     line-height: 30px;
     font-size: 30px;
     text-transform: uppercase;
     color: #fac012; }
-  .ecran6-box1 p {
+  .ecran6-box:nth-child(1) p {
     display: block;
     margin: 10px;
     margin-top: 30px;
     font-size: 30px;
     line-height: 40px; }
 
-.ecran6-box2:after,
-.ecran6-box3:after,
-.ecran6-box4:after {
+.ecran6-box:not(:nth-child(1)):after {
   position: absolute;
   content: "";
   display: block;
@@ -954,21 +940,19 @@ address {
   right: 5px;
   top: 20px;
   background-repeat: no-repeat;
-  background-origin: content-box;
-  background-size: 100px 110px;
-  z-index: -1; }
+  background-origin: content-box; }
 
-.ecran6-box2:after {
+.ecran6-box:nth-child(2):after {
   background-image: url("/TestPage/Images/ecran6-ico1.png"); }
 
-.ecran6-box3:after {
+.ecran6-box:nth-child(3):after {
   width: 80px;
   height: 90px;
   top: 30px;
   background-size: 80px 90px;
   background-image: url("/TestPage/Images/ecran6-ico2.png"); }
 
-.ecran6-box4:after {
+.ecran6-box:nth-child(4):after {
   top: 10px;
   height: 120px;
   background-size: 100px 120px;
@@ -978,9 +962,6 @@ address {
   .ecran6 {
     height: 100%;
     background-size: 1920px 100%; }
-  .ecran6-box1 {
-    display: table;
-    margin: 0px auto; }
   .ecran6-container {
     width: 600px;
     line-height: 140px;
@@ -990,9 +971,6 @@ address {
   .ecran6 {
     height: 100%;
     background-size: 1920px 100%; }
-  .ecran6-box1,
-  .ecran6-box2,
-  .ecran6-box3,
   .ecran6-box4 {
     display: table;
     margin: 15px auto; }
@@ -1062,6 +1040,10 @@ address {
   float: left; }
   .ecran7-box:hover {
     border-color: #fac012; }
+    .ecran7-box:hover .ecran7-ico {
+      background-color: #fac012; }
+      .ecran7-box:hover .ecran7-ico i {
+        color: #fff; }
   .ecran7-box p {
     margin-left: 70px;
     font-size: 20px;
@@ -1078,12 +1060,7 @@ address {
     width: 60px;
     height: 60px;
     float: left;
-    cursor: pointer;
     -webkit-tap-highlight-color: transparent; }
-    .ecran7-description .ecran7-ico:hover {
-      background-color: #fac012; }
-      .ecran7-description .ecran7-ico:hover i {
-        color: #fff; }
     .ecran7-description .ecran7-ico i {
       position: absolute;
       transition: 0.3s;
@@ -1189,7 +1166,7 @@ address {
     .ecran8-container .form select {
       font-size: 16px;
       height: 52px;
-      width: 260px;
+      width: 250px;
       color: #0c2e3b; }
     .ecran8-container .form h1 {
       position: relative;
@@ -1220,9 +1197,14 @@ address {
   display: inline-table;
   margin: 10px;
   padding: 5px 14px;
-  width: 230px;
+  width: 220px;
   height: 40px;
-  border: 1px solid #cccccc; }
+  border: 1px solid #cccccc;
+  float: left; }
+
+.error:focus {
+  border-color: #ff7373;
+  outline-color: #ff7373; }
 
 .error:focus {
   border-color: #ff7373;
@@ -1232,9 +1214,10 @@ address {
   display: inline-table;
   margin: 10px;
   padding: 5px 14px;
-  width: 510px;
+  width: 490px;
   height: 100px;
-  border: 1px solid #cccccc; }
+  border: 1px solid #cccccc;
+  resize: none; }
 
 .font {
   font-size: 16px;
@@ -1271,6 +1254,10 @@ address {
   .input-text {
     padding: 5px 10px;
     width: 260px; } }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800"); }
 
 body {
   position: relative;
