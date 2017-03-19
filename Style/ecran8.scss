@@ -9,7 +9,7 @@
     background-repeat: no-repeat;
     background-origin: content-box;
     background-size: 1920px 630px; 
-    background-image: url("/Images/bg3.png");
+    background-image: url("/TestPage/Images/bg3.png");
 }
 
 .ecran8-container {
@@ -83,6 +83,11 @@
     height: 40px;  
     border: 1px solid rgb(204, 204, 204);
     float: left;
+}
+.error:focus {
+    border-color: rgb(255, 115, 115);
+    //box-shadow: 0 0 5px rgb(255, 115, 115);
+    outline-color: rgb(255, 115, 115);
 }
 .error:focus {
     border-color: rgb(255, 115, 115);

@@ -3,7 +3,7 @@ import  { httpGet } from "./";
 function renderFlats(houseName, capacity, balcony) {
     let dom = ``; 
 
-    httpGet(`/json/flats.json`)
+    httpGet(`json/flats.json`)
         .then(
             response => {
                 for (let house of response) {

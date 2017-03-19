@@ -9,7 +9,7 @@
     flex-direction: column;
     text-align: center;
     align-content: center;
-    background:url("/Images/ecran3.png");
+    background:url("/TestPage/Images/ecran3.png");
     background-repeat: no-repeat;
     background-origin: content-box;
     background-size: 1920px 370px;
@@ -80,6 +80,7 @@
 
 .ecran3-box:nth-child(2) > div {
     background:url("/Images/house-ico3.png");
+
 }
 
 @media only screen and (min-width: 640px) and (max-width: 1200px) {

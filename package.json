@@ -5,7 +5,7 @@
   "scripts": {
     "predeploy": "npm run start",
     "deploy": "gh-pages -d start",
-    "start": "webpack-dev-server --hot --inline --progress --colors --watch --display-error-details --display-cached --content-base ./"
+    "start": "webpack"
   },
   "author": "",
   "license": "ISC",
