@@ -4,7 +4,6 @@
   right: 0px;
   display: block;
   height: 90px;
-  padding: 0px 24px;
   margin: 0px;
   font-size: 16px;
   font-family: "Open Sans";
@@ -14,22 +13,26 @@
 }
 
 .menu {
-    position: relative;
-    display: inline-table;
+    position: absolute;
+    display: inline-block;
     transition: 0.3s;
     height: 90px;
-    width: 65%;
-    margin: 0 3% 0 17%;
+    width: 560px;
+    margin: 0px auto;
+    left: 0px;
+    right: 0px;
 }
+
 .menu-item {
-    display: inline-table;
+    display: inline-block;
     transition: 0.3s;
     margin: 30px  10px;
     cursor: pointer;
     text-decoration: none;
     color: rgb(12, 46, 59);
+
     &:hover {
-        color: #ffcc00; 
+        color: rgba(250, 192, 18,1); 
     }
 }
 .logo {
@@ -47,15 +50,7 @@
     margin-left: -23px;  
 }
 
-@media only screen and (min-width: 1200px) {
-    .header {
-        margin: 0px auto;
-        padding: 0px;
-        width: 1200px;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 800px) {
     .header {
         padding: 0px;
         width: 100%;
@@ -63,37 +58,76 @@
 
     .menu {
         position: absolute;
-        display: block; 
+        margin: 0px;
+        left: initial;
+        right: 0px;
         width: 160px;
         right: 0px;
-        left: 0px;
-        margin: 0px auto;
         z-index: 2;
         background-color: #fff;
         overflow: hidden;
 
-        &:hover:before {
-            color: rgb(250, 192, 18);
+        .menu-toggle {
+            position: relative;
+            width: 40px;
+            height: 90px;
+            margin: 0px auto;
+            cursor: pointer;
+
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                transition: 0.3s;
+                width: 0px;
+                height: 0px;
+                bottom: 0px;
+                left: -60px;
+            }
+
+            &:hover span {
+                transition: 0.3s;
+                background: rgb(250, 192, 18);
+
+                &::before,
+                &::after {
+                    transition: 0.3s;
+                    background: rgb(250, 192, 18);
+                }
+            }
         }
 
-        &:before {
+        .menu-toggle span {
+            display: block;
             position: relative;
-            display: table;
-            transition: 0.3s;
-            content: "MENU";
-            width: 160px;
-            height: 90px;
-            text-align: center;
-            line-height: 90px;
-            vertical-align: middle;
-            border-bottom: 1px solid rgb(250, 192, 18);
-            cursor: pointer;
-            color: rgb(12, 46, 59); 
-            
-        }    
+            top: 42px;
+            left: 0px;
+            right: 0px;
+            height: 6px;
+            width: 40px;
+            background: rgb(12, 46, 59);
+
+            &::before,
+            &::after {
+                position: absolute;
+                display: block;
+                left: 0;
+                width: 100%;
+                height: 6px;
+                background-color: rgb(12, 46, 59);
+                content: "";
+            }
+
+            &::before {
+                top: -10px;
+            }
+
+            &::after {
+                bottom: -10px;
+            }
+        }
 
         .menu-item {
-            display: table;
             width: 140px;
             margin: 10px;
             background-color: #fff;
@@ -101,12 +135,16 @@
     }
 
     .active {
-        height: 230px;
+        height: 300px;
     }
-}
 
-@media only screen and (max-width: 640px) {
-    .menu {
-        margin-left: 50%;
+    .active .menu-toggle  {
+
+        &:after {
+            width: 160px;
+            border-bottom: 1px solid rgb(250, 192, 18);
+        }
     }
+
+
 }

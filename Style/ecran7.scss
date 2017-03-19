@@ -70,6 +70,14 @@
 
     &:hover {
         border-color: rgb(250, 192, 18);
+
+        .ecran7-ico {
+            background-color: rgb(250, 192, 18);
+
+            i {
+                color: #fff;
+            }
+        }
     }
 
     p {
@@ -92,16 +100,7 @@
         width: 60px;
         height: 60px;
         float: left;
-        cursor: pointer;
         -webkit-tap-highlight-color: rgba(0,0,0,0);
-
-        &:hover {
-            background-color: rgb(250, 192, 18);
-
-            i {
-                color: #fff;
-            }
-        }
 
         i  {
             position: absolute;

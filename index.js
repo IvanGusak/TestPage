@@ -41,7 +41,7 @@ function attachEvent() {
 		elem.addEventListener("click", houseToggle);
 	}
 
-	menu.addEventListener("click", menuToggle);
+	menu.addEventListener("click", menuToggle, true);
 	button.addEventListener("click", submitForm);
 }
 
