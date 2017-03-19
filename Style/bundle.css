@@ -514,10 +514,10 @@ address {
     float: left; }
 
 .ecran3-box:nth-child(1) > div {
-  background: url("/Images/house-ico2.png"); }
+  background: url("/TestPage/Images/house-ico2.png"); }
 
 .ecran3-box:nth-child(2) > div {
-  background: url("/Images/house-ico3.png"); }
+  background: url("/TestPage/Images/house-ico3.png"); }
 
 @media only screen and (min-width: 640px) and (max-width: 1200px) {
   .ecran3-container p {
